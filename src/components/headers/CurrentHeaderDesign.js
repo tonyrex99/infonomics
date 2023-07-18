@@ -37,36 +37,40 @@ const StyledHeader = styled(Header)`
 
 // Random Decorator Blobs (shapes that you see in background)
 
-const navLinks = [
-  <NavLinks key={1}>
-    <RouterLink to="home">
-      <NavLink>Home</NavLink>
-    </RouterLink>
-    <RouterLink to="about-us">
-      <NavLink>About</NavLink>
-    </RouterLink>
-    <RouterLink to="blog">
-      <NavLink>Blog</NavLink>
-    </RouterLink>
-    <RouterLink to="team">
-      <NavLink>Team</NavLink>
-    </RouterLink>
-    <RouterLink to="career">
-      <NavLink>Careers</NavLink>
-    </RouterLink>
-    <RouterLink to="service">
-      <NavLink>Services</NavLink>
-    </RouterLink>
-    <RouterLink to="contact-us">
-      <NavLink>Contact us</NavLink>
-    </RouterLink>
-  </NavLinks>,
+const navLinkContent = [
+  { to: "home", name: "Home" },
+  { to: "about-us", name: "About" },
+  { to: "blog", name: "Blog" },
+  { to: "team", name: "Team" },
+  { to: "career", name: "Careers" },
+  { to: "service", name: "Services" },
+  { to: "contact-us", name: "Contact us" },
 ];
+
 export function NavBar() {
+  const [activeTab, setactiveTab] = React.useState("");
+  const navLinks = navLinkContent.map((option, index) => (
+    <RouterLink
+      to={option.to}
+      className={({ isActive, isPending }) => {
+        if (isActive) {
+          setactiveTab(option.name);
+          document.title = `Infonomics | ${option.name}`;
+          return isActive ? "activeNav" : "";
+        }
+      }}
+    >
+      <NavLink
+        css={[tw`text-black`, activeTab === option.name && tw`underline`]}
+      >
+        {option.name}
+      </NavLink>
+    </RouterLink>
+  ));
   return (
     <StyledHeader
       style={{ top: 0, position: "fixed" }}
-      links={navLinks}
+      links={<NavLinks key={"navBar"}> {navLinks}</NavLinks>}
       roundedHeaderButton={true}
       logoLink={defaultLogoLink}
     />

@@ -223,7 +223,7 @@ export default () => {
                     </div>
                   </div>
                   <div tw="flex justify-end">
-                    <StyledLink href="javascript:">
+                    <StyledLink>
                       <svg
                         width="20"
                         height="20"
