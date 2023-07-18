@@ -8,7 +8,6 @@ import Slider from "components/cards/ThreeColSlider";
 import MainFeature1 from "components/features/TwoColWithButton.js";
 
 const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
-const Heading = tw.span`lowercase`;
 const HighlightedText = tw.span`text-primary-500`;
 
 export default () => {

@@ -1,5 +1,4 @@
 import React from "react";
-import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import tw from "twin.macro";
 import styled from "styled-components"; //eslint-disable-line
 import { css } from "styled-components/macro"; //eslint-disable-line
@@ -16,10 +15,6 @@ import { ReactComponent as LinkedinIcon } from "images/linkedin-icon.svg";
 import { ReactComponent as GithubIcon } from "images/github-icon.svg";
 
 const Subheading = tw.span`uppercase tracking-wider text-sm`;
-const StyledButton = tw.button`rounded-md bg-gray-200 py-3 px-3 leading-5 transition hover:bg-primary-400 hover:text-white md:py-4 md:px-5`;
-const StyledProject = tw.div`bg-gray-200 hover:scale-105  rounded-xl border px-4 py-4 sm:px-6 sm:py-6 transition   border-gray-900 `;
-const StyledLink = tw.a`flex h-12 w-12 items-center justify-center rounded-full transition hover:bg-primary-400 hover:text-white bg-gray-900 text-gray-100`;
-
 export default () => {
   return (
     <>
