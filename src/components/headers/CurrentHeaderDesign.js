@@ -24,8 +24,15 @@ const defaultLogoLink = (
     <img src={logo} alt="logo" />
   </LogoLink>
 );
-
-// Random Decorator Blobs (shapes that you see in background)
+const StyledHeader = styled(Header)`
+  ${tw` pt-8 max-w-none w-full bg-white pb-5  z-20 fixed top-0 `}
+  ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
+    ${tw`text-black hover:border-gray-500 hover:text-black`}
+  }
+  ${NavToggle}.closed {
+    ${tw`text-black hover:text-gray-700`}
+  }
+`;
 
 const navLinkContent = [
   { to: "home", name: "Home" },
@@ -40,15 +47,6 @@ const navLinkContent = [
 export function NavBar() {
   const [activeTab, setactiveTab] = React.useState("Home");
   const [isScrolled, setIsScrolled] = React.useState(true);
-  const StyledHeader = styled(Header)`
-    ${tw` pt-8 max-w-none w-full bg-white pb-5  z-20 fixed top-0 `}
-    ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
-      ${tw`text-black hover:border-gray-500 hover:text-black`}
-    }
-    ${NavToggle}.closed {
-      ${tw`text-black hover:text-gray-700`}
-    }
-  `;
 
   React.useEffect(() => {
     const handleScroll = () => {
