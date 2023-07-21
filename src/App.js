@@ -15,6 +15,7 @@ import Service from "pages/Service";
 import Team from "pages/Team";
 import PrivacyPolicy from "pages/PrivacyPolicy";
 import TermsOfService from "pages/TermsOfService";
+import "./invert.css";
 export default function App() {
   return (
     <>

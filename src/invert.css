@@ -1,0 +1,15 @@
+.invert-colors {
+  background-color: black;
+  color: white;
+}
+
+/* styles.css (or in your style tag) */
+html.invert-colors .header {
+  background-color: black;
+  color: white;
+}
+
+html.invert-colors .footer {
+  background-color: black;
+  color: white;
+}

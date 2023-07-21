@@ -42,7 +42,7 @@ export const LogoLink = styled(NavLink)`
 
 export const MobileNavLinksContainer = tw.nav`flex flex-1 items-center justify-between`;
 export const NavToggle = tw.button`
-  lg:hidden z-20 focus:outline-none hocus:text-primary-500 transition duration-300 mr-5 rounded-[100%]
+  lg:hidden z-20 focus:outline-none ml-5 hocus:text-primary-500 transition duration-300 mr-5 rounded-[100%]
 `;
 export const MobileNavLinks = motion(styled.div`
   ${tw`lg:hidden z-10 fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-gray-900 bg-white`}
@@ -115,7 +115,7 @@ export default ({
           className={showNavLinks ? "open" : "closed"}
         >
           {showNavLinks ? (
-            <CloseIcon tw="w-6 h-6" />
+            <CloseIcon tw="w-6 h-6 text-black" />
           ) : (
             <MenuIcon tw="w-6 h-6" />
           )}
@@ -153,3 +153,37 @@ const collapseBreakPointCssMap = {
     mobileNavLinksContainer: tw`lg:hidden`,
   },
 };
+// blue is #052639  red is #c00000
+
+/**
+ * former primary
+ *  
+
+      test 2
+
+         primary: {
+          100: "#f2cccc",
+          200: "#e69999",
+          300: "#d96666",
+          400: "#cd3333",
+          500: "#c00000",
+          600: "#9a0000",
+          700: "#730000",
+          800: "#4d0000",
+          900: "#260000"
+},
+
+test3
+
+primary: {
+        100: "#f6d8d8",
+        200: "#f1b0b0",
+        300: "#ec8888",
+        400: "#e76060",
+        500: "#e23838",
+        600: "#c72f30",
+        700: "#ac2728",
+        800: "#911f20",
+        900: "#761618",
+      },
+ */
