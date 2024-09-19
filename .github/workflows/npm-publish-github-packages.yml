@@ -41,13 +41,13 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile  # Ensure consistent installs using yarn
 
-      - name: Build with Vite
+      - name: Build with Create React App
         run: yarn build  # Run the build command with yarn
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./build
 
   deploy:
     environment:
