@@ -1,6 +1,5 @@
 {
   "name": "Infonomics",
-  "homepage":"https://tonyrex99.github.io/infonomics",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
